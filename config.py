@@ -15,23 +15,13 @@ WIFI_CONNECT_RETRIES = 1
 WIFI_RETRY_BACKOFF_SECONDS = 5
 # Leave as none for MAC based unique hostname or specify a custom hostname string
 CUSTOM_HOSTNAME = "Pico-Weather"
+# Upload frequency management
+UPLOAD_RETRY_SECONDS = 30
+MAX_UPLOADS_PER_MIN = 10
 
 NTP_SYNC_INTERVAL_SECONDS = 86400
 
 I2C_PINS = {"sda": 0, "scl": 1}
-
-# Adjust daily rain day for UK BST
-UK_BST = True
-
-# For local time corrections to daily rain logging other than BST
-# Ignored if uk_bst = True
-UTC_OFFSET = 0
-
-# where to upload to ("http", "mqtt", "adafruit_io", "influxdb", "wunderground")
-DESTINATION = None
-# Optional secondary destination
-# set to None if not in use
-SECONDARY_DESTINATION = None
 
 # influxdb settings
 INFLUXDB_ORG = ""
@@ -45,12 +35,7 @@ WUNDERGROUND_STATION_ID = None
 WUNDERGROUND_STATION_KEY = None
 
 # height in metres above sea level for atmospheric pressure compensation
-HEIGHT_ABOVE_SEA_LEVEL_M = 52
-
-# offset up to +/- 360 degrees for wind direction if you can't reorientate the weather station
-WIND_DIRECTION_OFFSET = 0
+HEIGHT_ABOVE_SEA_LEVEL_M = 0
 
 #BME280
 BME280_POLL_FREQUENCY = 60
-
-UPLOAD_RETRY_SECONDS = 30
