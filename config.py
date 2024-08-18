@@ -23,19 +23,22 @@ NTP_SYNC_INTERVAL_SECONDS = 86400
 
 I2C_PINS = {"sda": 0, "scl": 1}
 
-# influxdb settings
+# Influxdb settings
 INFLUXDB_ORG = ""
 INFLUXDB_URL = ""
 INFLUXDB_TOKEN = ""
 INFLUXDB_BUCKET = ""
 INFLUXDB_DEVICE = CUSTOM_HOSTNAME
 
-# weather underground settings
+# Weather underground settings
 WUNDERGROUND_STATION_ID = None
 WUNDERGROUND_STATION_KEY = None
 
-# height in metres above sea level for atmospheric pressure compensation
+# Height in metres above sea level for atmospheric pressure compensation
 HEIGHT_ABOVE_SEA_LEVEL_M = 0
 
-#BME280
+# BME280
 BME280_POLL_FREQUENCY = 60
+
+# Destination selection: Add one or more of the following to the list: "InfluxDB", "Example"
+DESTINATIONS = ["InfluxDB", "Example"]
