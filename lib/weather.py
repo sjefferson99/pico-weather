@@ -1,5 +1,5 @@
 from lib.ulogging import uLogger
-from lib.bme280 import BME280
+from lib.sensors.bme280 import BME280
 from lib.networking import WirelessNetwork
 from asyncio import create_task, get_event_loop
 from lib.weather_data import WeatherData
